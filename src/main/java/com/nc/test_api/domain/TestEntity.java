@@ -1,25 +1,31 @@
 package com.nc.test_api.domain;
 
-import lombok.Data;
-import lombok.AllArgsContructor;
-import lombok.NoArgsConstructor;
-import lombok.Builder;
-import jakarta.persistence.Entity;
+import java.time.LocalDate;
 
-@Data
-@AllArgsContructor
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity //jpa entity 
+@AllArgsConstructor
 @NoArgsConstructor
-@Builder
-@Entity
-@Table(name = 'customers')
+@Data
 public class TestEntity {
   
   @Id
+  @Column(name="id")
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long Id;
+
   private String name;
-
   private String mail;
-
   private String password;
-
+  private Integer age;
+  private LocalDate dob;
 
 }

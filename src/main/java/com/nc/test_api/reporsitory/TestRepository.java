@@ -1,7 +1,10 @@
-package com.nc.test_api.domain;
+package com.nc.test_api.reporsitory;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.NoRepositoryBean;
+import com.nc.test_api.domain.TestEntity;
 
-public interface TestRepository extends JpaRepository<> {
-  
+@NoRepositoryBean
+public interface TestRepository extends JpaRepository<TestEntity, String> {
+    
 }
