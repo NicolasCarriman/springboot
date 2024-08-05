@@ -11,21 +11,21 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity //jpa entity 
+@Entity // jpa entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 public class TestEntity {
-  
-  @Id
-  @Column(name="id")
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long Id;
 
-  private String name;
-  private String mail;
-  private String password;
-  private Integer age;
-  private LocalDate dob;
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long Id;
+
+    private String name;
+    private String mail;
+    private String password;
+    private Integer age;
+    private LocalDate dob;
 
 }
