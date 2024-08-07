@@ -5,4 +5,4 @@ import org.springframework.stereotype.Repository;
 import com.nc.test_api.domain.Custommer;
 
 @Repository
-public interface TestRepository extends JpaRepository<Custommer, Long> {}
+public interface CustomerRepository extends JpaRepository<Custommer, Long> {}
