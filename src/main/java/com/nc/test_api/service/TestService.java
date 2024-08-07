@@ -5,14 +5,14 @@ import java.time.Month;
 import java.util.List;
 import org.springframework.stereotype.Service;
 
-import com.nc.test_api.domain.TestEntity;
+import com.nc.test_api.domain.Custommer;
 
 @Service
 public class TestService {
 
-    public List<TestEntity> getTest() {
+    public List<Custommer> getTest() {
         return List.of(
-                new TestEntity(
+                new Custommer(
                         1L,
                         "test222",
                         "test@example.net",
